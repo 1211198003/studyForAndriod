@@ -1,4 +1,4 @@
-package cn.series.mylibrary
+package cn.series.base
 
 import org.junit.Test
 

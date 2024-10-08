@@ -2,16 +2,24 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
 }
+apply from: "${rootDir}/buildResp/buildTool.gradle"
+def buildConfigVersion = rootProject.ext.buildConfigVersion
 
 android {
     namespace 'cn.series.common'
-    compileSdk 34
+    compileSdk buildConfigVersion.compileSdk
 
     defaultConfig {
-        minSdk 24
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
+        minSdk buildConfigVersion.minSdk
+        targetSdk buildConfigVersion.targetSdk
+        versionCode buildConfigVersion.versionCode
+        versionName buildConfigVersion.versionName
+
+        testInstrumentationRunner buildConfigVersion.testInstrumentationRunner
+        vectorDrawables {
+            useSupportLibrary buildConfigVersion.useSupportLibrary
+        }
     }
 
     buildTypes {
@@ -21,20 +29,21 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility buildConfigVersion.sourceCompatibility
+        targetCompatibility buildConfigVersion.targetCompatibility
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = buildConfigVersion.jvmTarget
     }
+    buildFeatures {
+        compose buildConfigVersion.compose
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion buildConfigVersion.kotlinCompilerExtensionVersion
+    }
+
 }
 
 dependencies {
 
-    implementation libs.androidx.core.ktx
-    implementation libs.androidx.appcompat
-    implementation libs.material
-    testImplementation libs.junit
-    androidTestImplementation libs.androidx.junit
-    androidTestImplementation libs.androidx.espresso.core
 }

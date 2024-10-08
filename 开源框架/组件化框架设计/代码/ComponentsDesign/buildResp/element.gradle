@@ -1,0 +1,26 @@
+
+ext {
+    control_lib = [
+            [
+                    name: "appcompat",
+                    groupId: "androidx.appcompat",
+                    groupName: "appcompat",
+                    version: "1.7.0",
+                    declare : "implementation"
+            ],
+            [
+                    name: "androidx-activity-compose",
+                    groupId: "androidx.activity",
+                    groupName: "activity-compose",
+                    version: "1.9.2",
+                    declare : "implementation"
+            ],
+            [
+                    name: "junit",
+                    groupId: "junit",
+                    groupName: "junit",
+                    version: "4.13.2",
+                    declare : "implementation"
+            ]
+    ]
+}

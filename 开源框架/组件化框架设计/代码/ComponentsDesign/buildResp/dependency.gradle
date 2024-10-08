@@ -1,0 +1,58 @@
+
+ext {
+    dep = [
+        project: [
+            "appcompat",
+            "androidx-activity-compose",
+            "junit"
+        ],
+        app: [
+
+        ],
+        mall: [
+
+        ],
+        ktv: [
+
+        ],
+        home: [
+
+        ],
+        common: [
+
+        ],
+        base:[
+
+        ]
+    ]
+    localDep = [
+        app: [
+            "mall",
+            "ktv",
+            "home",
+            "base",
+            "common"
+        ],
+        mall: [
+            "base",
+            "common"
+        ],
+        ktv: [
+            "base",
+            "common"
+        ],
+        home: [
+            "base",
+            "common"
+        ],
+        common: [
+
+        ],
+        base:[
+
+        ]
+    ]
+
+}
+
+

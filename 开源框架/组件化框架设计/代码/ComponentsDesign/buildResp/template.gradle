@@ -1,0 +1,21 @@
+
+apply from: "$rootDir/buildResp/config.gradle"
+
+ext {
+    buildConfigVersion =  [
+        compileSdk: 34,
+        minSdk : 24,
+        targetSdk : 34,
+        versionCode : 1,
+        versionName :'1.0',
+        testInstrumentationRunner : "androidx.test.runner.AndroidJUnitRunner",
+        useSupportLibrary : true,
+        sourceCompatibility: JavaVersion.VERSION_1_8,
+        targetCompatibility: JavaVersion.VERSION_1_8,
+        jvmTarget: 1.8,
+        compose: true,
+        kotlinCompilerExtensionVersion: '1.5.1',
+    ]
+}
+
+
