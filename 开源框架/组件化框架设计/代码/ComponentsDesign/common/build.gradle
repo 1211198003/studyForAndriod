@@ -41,7 +41,9 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion buildConfigVersion.kotlinCompilerExtensionVersion
     }
-
+    buildFeatures {
+        buildConfig=true
+    }
 }
 
 dependencies {

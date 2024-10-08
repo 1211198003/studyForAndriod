@@ -1,5 +1,6 @@
 apply from: "$rootDir/buildResp/dependency.gradle"
 apply from: "$rootDir/buildResp/element.gradle"
+apply from: "$rootDir/buildResp/baseConfig.gradle"
 
 // 将上述的 control_lib 按照 name: lib的hash形式存在 hashmap 中
 ext.set("globalDependenciesMap", new HashMap<String, HashMap<String, String>>())
@@ -9,7 +10,6 @@ control_lib.each { lib ->
 }
 println("globalDependenciesMap"+ globalDependenciesMap)
 println("element.gradle")
-
 
 // 执行操作，将 element 中将 control_lib 里的 map 取出
 // 按照 name 存放到 一个 map 集合中， 再根据 dependency.gradle 中的按需引入
@@ -36,7 +36,6 @@ if(isRelease){
     pullLocalModule(project.ext.localDep[project.name])
 }
 
-
 def pullLocalModule(List<String> localModules){
     localModules.each { module ->
         dependencies {
@@ -47,3 +46,4 @@ def pullLocalModule(List<String> localModules){
 }
 
 println("buildTool.gradle")
+
