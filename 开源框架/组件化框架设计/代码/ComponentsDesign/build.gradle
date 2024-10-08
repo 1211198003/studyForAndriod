@@ -4,7 +4,6 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.android.library) apply false
 }
-apply from: "$rootDir/buildResp/template.gradle"
 apply from: "$rootDir/buildResp/config.gradle"
 
 println("build.gradle all")

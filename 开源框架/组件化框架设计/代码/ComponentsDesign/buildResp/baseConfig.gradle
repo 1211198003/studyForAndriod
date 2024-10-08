@@ -1,8 +1,9 @@
 
 
-//android{
-//    defaultConfig {
-////        buildConfigField("boolean", "xxx", String.valueOf(true))
-//
-//    }
-//}
+android{
+
+    defaultConfig {
+        buildConfigField("boolean", "xxx", String.valueOf(true))
+
+    }
+}
