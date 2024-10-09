@@ -1,9 +1,7 @@
 
 
 android{
-
     defaultConfig {
-        buildConfigField("boolean", "xxx", String.valueOf(true))
-
+        buildConfigField("boolean", "isRelease", String.valueOf(isRelease))
     }
 }

@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val baseTest =  BaseTest()
 //        BuildConfig
-        Log.d("lmx", BuildConfig.xxx.toString())
+        Log.d("lmx", BuildConfig.isRelease.toString())
 
     }
 }
