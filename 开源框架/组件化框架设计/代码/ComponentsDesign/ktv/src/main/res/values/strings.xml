@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ktv</string>
+    <string name="ktv">KTV</string>
+    <string name="back">back</string>
 </resources>

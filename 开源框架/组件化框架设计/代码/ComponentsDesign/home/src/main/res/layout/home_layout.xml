@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:text="@string/home"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/ktvButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/ktv"
+            android:layout_marginHorizontal="@dimen/btn_slot"
+            />
+        <Button
+            android:id="@+id/mallButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/mall"
+            android:layout_marginHorizontal="@dimen/btn_slot"
+            />
+    </LinearLayout>
+
+
+
+</RelativeLayout>
