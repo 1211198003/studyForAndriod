@@ -8,7 +8,6 @@ import cn.series.mall.MallActivity
 
 class AppApplication: BaseApplication() {
 
-
     override fun onCreate() {
         super.onCreate()
         // 组册进来

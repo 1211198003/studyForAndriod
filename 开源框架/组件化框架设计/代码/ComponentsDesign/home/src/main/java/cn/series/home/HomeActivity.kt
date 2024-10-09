@@ -28,6 +28,11 @@ class HomeActivity : ComponentActivity(), View.OnClickListener {
         }
     }
 
+    /**
+     * TODO 反射的方式实现的
+     *
+     * @param path
+     */
     // 通过反射的方式跳转到制定到子模块
     private fun goto(path : String){
         val clazz = Class.forName(path)
@@ -36,6 +41,12 @@ class HomeActivity : ComponentActivity(), View.OnClickListener {
         finish()
     }
 
+    /**
+     * TODO 全局的方式实现的
+     *
+     * @param groupName
+     * @param pathName
+     */
     private fun gotoByRecord(groupName: String, pathName: String){
         val clazz = RecordPathManager.getClass(groupName, pathName)
         val intent = Intent(this, clazz)
